@@ -1,5 +1,7 @@
 package exercise1;
 
+import java.util.Objects;
+
 /**
  * A class that models playing card Objects. Cards have 
  * a value (note that Ace = 1, Jack = 11, Queen = 12, King = 13)
@@ -43,4 +45,32 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }  
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.suit);
+        hash = 37 * hash + this.value;
+        return hash;
+    }
+
+@Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Card otherCard = (Card) obj;
+        return value == otherCard.value && suit.equals(otherCard.suit);
+    }
+
+    @Override
+    public String toString() {
+        return "Card{" + "suit=" + suit + ", value=" + value + '}';
+    }
+    
+    
+    
 }
