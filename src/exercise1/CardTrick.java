@@ -48,6 +48,12 @@ public class CardTrick {
         int suit_value = sc.nextInt();
         String suit = Card.SUITS[suit_value - 1]; 
         
+         // and search the hand here. 
+        // Hint: You can ask for values 1 to 10, and then
+        //       11 for jack, 12 for queen, etc. (remember arrays are 0-based though)
+        //       1 for Hearts, 2 for Diamonds, etc. (remember arrays are 0-based though)
+        // 
+        // Then loop through the cards in the array to see if there's a match.
         Card playerCard = new Card();
         
         playerCard.setValue(value);
@@ -68,12 +74,7 @@ public class CardTrick {
             System.out.print("Sorry better luck next time");
         }
         
-        // and search the hand here. 
-        // Hint: You can ask for values 1 to 10, and then
-        //       11 for jack, 12 for queen, etc. (remember arrays are 0-based though)
-        //       1 for Hearts, 2 for Diamonds, etc. (remember arrays are 0-based though)
-        // 
-        // Then loop through the cards in the array to see if there's a match.
+       
         
         
         // If the guess is successful, invoke the printInfo() method below.
@@ -85,6 +86,8 @@ public class CardTrick {
      * replace this information with your own.
      * @author Paul Bonenfant Jan 2022
      */
+    
+    //I am done
     private static void printInfo() {
     
         System.out.println("Congratulations, you guessed right!");
